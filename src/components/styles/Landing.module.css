@@ -54,3 +54,31 @@ overflow: hidden;
     border-radius: 15px;
     overflow: hidden;
 }
+.Chronometer h1{
+    color: #fff;
+    font-size: 4rem;
+    margin-top: 60px;    
+}
+.ButtonContainer{
+    margin-top: 40px;
+}
+.ButtonContainer img{
+    width: 40px;
+    
+}
+.ButtonContainer button{
+    padding: 10px;
+    border-radius: 50%;
+    margin: 0 20px;
+    background-color: rgba(102, 102, 102, 0.514);
+}
+.ButtonContainer button[name="start"]{
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(92, 92, 92, 0.493) 52%);
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+ 
+}

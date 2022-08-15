@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./styles/Landing.module.css";
-import logoBG from "./image/javardh-URLlQPnfG6Y-unsplash.jpg";
 const LandingPage = () => {
   const date = new Date();
   const h = date.getHours();
@@ -9,7 +8,7 @@ const LandingPage = () => {
   const s = date.getSeconds();
 
   const [second, setSecond] = useState("");
-  console.log(window.location.pathname);
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setSecond(s);

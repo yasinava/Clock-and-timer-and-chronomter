@@ -2,6 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./styles/Landing.module.css";
 
+import pause from "./image/pause-svgrepo-com.svg";
+import play from "./image/play-svgrepo-com.svg";
+import flag from "./image/flag-svgrepo-com.svg";
+import reset from "./image/stop-svgrepo-com.svg";
+
 let lapList = [];
 
 const Chronometer = () => {
@@ -10,12 +15,7 @@ const Chronometer = () => {
   const [second, setSecond] = useState(0);
   const [mSecond, setMSecond] = useState(0);
   const [stop, setStop] = useState(true);
-  const [lap, setLap] = useState({
-    h: "",
-    m: "",
-    s: "",
-    ms: "",
-  });
+
 
   useEffect(() => {
     let interval = null;
@@ -43,7 +43,6 @@ const Chronometer = () => {
     }
     return () => clearInterval(interval);
   }, [stop, mSecond]);
-  console.log(lap);
   console.log(lapList);
   return (
     <div className={styles.chronometerContainer}>
@@ -65,13 +64,15 @@ const Chronometer = () => {
           <div>Timer</div>
         </Link>
       </div>
-      <div>
+      <div className={styles.Chronometer}>
         <h1>
           {hours}:{min}:{second}.{mSecond}
         </h1>
-        <div>
+        <div className={styles.ButtonContainer}>
           {stop && mSecond === 0 && (
             <button
+            name="start"
+            className="btn w-50 shadow"
               onClick={() => {
                 setStop(false);
               }}
@@ -82,6 +83,7 @@ const Chronometer = () => {
           {!stop && mSecond > 0 && (
             <div>
               <button
+              className="btn "
                 onMouseDown={() => {
                   lapList.push({
                     h: hours,
@@ -91,20 +93,22 @@ const Chronometer = () => {
                   });
                 }}
               >
-                Lap
+                <img src={flag} alt="logoButton"/>
               </button>
               <button
+              className="btn "
                 onClick={() => {
                   setStop(true);
                 }}
               >
-                stop
+               <img src={pause} alt="logoButton"/>
               </button>
             </div>
           )}
           {stop && mSecond > 0 && (
             <div>
               <button
+              className="btn "
                 onClick={() => {
                   setHours(0);
                   setMin(0);
@@ -113,14 +117,17 @@ const Chronometer = () => {
                   lapList = [];
                 }}
               >
-                reset
+              <img src={reset} alt="logoButton"/>
+
               </button>
               <button
+              className="btn "
                 onClick={() => {
                   setStop(false);
                 }}
               >
-                start
+             <img src={play} alt="logoButton"/>
+
               </button>
             </div>
           )}
