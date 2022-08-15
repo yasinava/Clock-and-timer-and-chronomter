@@ -16,7 +16,6 @@ const Chronometer = () => {
   const [mSecond, setMSecond] = useState(0);
   const [stop, setStop] = useState(true);
 
-
   useEffect(() => {
     let interval = null;
     if (!stop) {
@@ -71,8 +70,8 @@ const Chronometer = () => {
         <div className={styles.ButtonContainer}>
           {stop && mSecond === 0 && (
             <button
-            name="start"
-            className="btn w-50 shadow"
+              name="start"
+              className="btn w-50 shadow"
               onClick={() => {
                 setStop(false);
               }}
@@ -83,7 +82,7 @@ const Chronometer = () => {
           {!stop && mSecond > 0 && (
             <div>
               <button
-              className="btn "
+                className="btn "
                 onMouseDown={() => {
                   lapList.push({
                     h: hours,
@@ -93,22 +92,22 @@ const Chronometer = () => {
                   });
                 }}
               >
-                <img src={flag} alt="logoButton"/>
+                <img src={flag} alt="logoButton" />
               </button>
               <button
-              className="btn "
+                className="btn "
                 onClick={() => {
                   setStop(true);
                 }}
               >
-               <img src={pause} alt="logoButton"/>
+                <img src={pause} alt="logoButton" />
               </button>
             </div>
           )}
           {stop && mSecond > 0 && (
             <div>
               <button
-              className="btn "
+                className="btn "
                 onClick={() => {
                   setHours(0);
                   setMin(0);
@@ -117,31 +116,38 @@ const Chronometer = () => {
                   lapList = [];
                 }}
               >
-              <img src={reset} alt="logoButton"/>
-
+                <img src={reset} alt="logoButton" />
               </button>
               <button
-              className="btn "
+                className="btn "
                 onClick={() => {
                   setStop(false);
                 }}
               >
-             <img src={play} alt="logoButton"/>
-
+                <img src={play} alt="logoButton" />
               </button>
             </div>
           )}
         </div>
       </div>
-
-      <div>
-        {lapList.map((item) => (
-          <p>{item.ms}</p>
-        ))}
+      <div className={styles.table}>
+        <table className="table table-striped table-borderless">
+          <tbody>
+            {lapList.map((item) => (
+              <tr>
+                <td>
+                  <img src={flag} alt="flag" />
+                </td>
+                <td className="text-light">
+                  {item.h} : {item.m} : {item.s}.{item.ms}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );
 };
 
 export default Chronometer;
-

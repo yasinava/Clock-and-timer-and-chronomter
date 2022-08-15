@@ -1,84 +1,106 @@
-.moonContainer{
-    width: 100%;
-    height: 100%;
-    background:url("../image/javardh-URLlQPnfG6Y-unsplash.jpg") ;
-    background-size: cover;
-    color: #fff;
-border-radius: 15px;
-overflow: hidden;
+.moonContainer {
+  width: 100%;
+  height: 100%;
+  background: url("../image/javardh-URLlQPnfG6Y-unsplash.jpg");
+  background-size: cover;
+  color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
 }
-.sunContainer{
-    width: 100%;
-    height: 100%;
-    background:url("../image/nic-y-c-WzazSaQF1F8-unsplash.jpg") ;
-    background-size: cover;
-    border-radius: 15px;
-    overflow: hidden;
+.sunContainer {
+  width: 100%;
+  height: 100%;
+  background: url("../image/nic-y-c-WzazSaQF1F8-unsplash.jpg");
+  background-size: cover;
+  border-radius: 15px;
+  overflow: hidden;
 }
-.navbarContainer{
-    display: flex;
-    width: 100%;
-    height: 60px;
-}
-
-.navbarContainer a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 117px;
-    height: 60px;
-    color: #fff;
-    text-decoration: none;
-    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0, 0, 0, 0.566) 49%);
-}
-.navbarClockItem{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 117px;
-    height: 60px;
-    color: #fff;
-    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(155, 155, 155, 0.566) 49%);
-}
-.clockText{
-    margin-top: 100px;
+.navbarContainer {
+  display: flex;
+  width: 100%;
+  height: 60px;
 }
 
-.chronometerContainer{
-    width: 100%;
-    height: 100%;
-    background:url("../image/670bc0f15088200dc7bd31ff37daa245.gif") ;
-    background-size: cover;
-    border-radius: 15px;
-    overflow: hidden;
+.navbarContainer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 117px;
+  height: 60px;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.566) 49%
+  );
 }
-.Chronometer h1{
-    color: #fff;
-    font-size: 4rem;
-    margin-top: 60px;    
+.navbarClockItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 117px;
+  height: 60px;
+  color: #fff;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(155, 155, 155, 0.566) 49%
+  );
 }
-.ButtonContainer{
-    margin-top: 40px;
+.clockText {
+  margin-top: 100px;
 }
-.ButtonContainer img{
-    width: 40px;
-    
+
+.chronometerContainer {
+  width: 100%;
+  height: 100%;
+  background: url("../image/670bc0f15088200dc7bd31ff37daa245.gif");
+  background-size: cover;
+  border-radius: 15px;
+  overflow: hidden;
 }
-.ButtonContainer button{
-    padding: 10px;
-    border-radius: 50%;
-    margin: 0 20px;
-    background-color: rgba(102, 102, 102, 0.514);
+.Chronometer h1 {
+  color: #fff;
+  font-size: 4rem;
+  margin-top: 60px;
 }
-.ButtonContainer button[name="start"]{
-    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(92, 92, 92, 0.493) 52%);
-    color: #fff;
-    font-weight: bold;
-    font-size: 1rem;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
- 
+.ButtonContainer {
+  margin-top: 40px;
+}
+.ButtonContainer img {
+  width: 40px;
+}
+.ButtonContainer button {
+  padding: 10px;
+  border-radius: 50%;
+  margin: 0 20px;
+  background-color: rgba(102, 102, 102, 0.514);
+}
+.ButtonContainer button[name="start"] {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(92, 92, 92, 0.493) 52%
+  );
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+.table {
+  width: 350px;
+  height: 170px;
+  margin-top: 10px;
+  overflow: auto;
+}
+.table img {
+  width: 20px;
+}
+.table table {
+  background-color: rgba(0, 0, 0, 0.123);
 }
