@@ -1,0 +1,56 @@
+.moonContainer{
+    width: 100%;
+    height: 100%;
+    background:url("../image/javardh-URLlQPnfG6Y-unsplash.jpg") ;
+    background-size: cover;
+    color: #fff;
+border-radius: 15px;
+overflow: hidden;
+}
+.sunContainer{
+    width: 100%;
+    height: 100%;
+    background:url("../image/nic-y-c-WzazSaQF1F8-unsplash.jpg") ;
+    background-size: cover;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.navbarContainer{
+    display: flex;
+    width: 100%;
+    height: 60px;
+}
+
+.navbarContainer a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 117px;
+    height: 60px;
+    color: #fff;
+    text-decoration: none;
+    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0, 0, 0, 0.566) 49%);
+}
+.navbarClockItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 117px;
+    height: 60px;
+    color: #fff;
+    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(155, 155, 155, 0.566) 49%);
+}
+.clockText{
+    margin-top: 100px;
+}
+
+.chronometerContainer{
+    width: 100%;
+    height: 100%;
+    background:url("../image/670bc0f15088200dc7bd31ff37daa245.gif") ;
+    background-size: cover;
+    border-radius: 15px;
+    overflow: hidden;
+}
