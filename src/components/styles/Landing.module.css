@@ -64,9 +64,10 @@
 }
 .Chronometer h1 {
   color: #fff;
-  font-size: 4rem;
+  font-size: 3rem;
   margin-top: 60px;
 }
+
 .ButtonContainer {
   margin-top: 40px;
 }
@@ -103,4 +104,98 @@
 }
 .table table {
   background-color: rgba(0, 0, 0, 0.123);
+}
+.timerContainer {
+  width: 100%;
+  height: 100%;
+  background: url("../image/istockphoto-1168031065-612x612.jpg");
+  background-size: cover;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+.circular{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  text-align: center;
+}
+.timerButtons button{
+  border-radius: 50%;
+  background-color: rgba(128, 128, 128, 0.507);
+  border: none;
+  padding: 5px;
+  width: 60px;
+  height: 60px;
+  margin: 30px 15px;
+  
+}
+.timerButtons button[name="start"]{
+  background-color: rgba(192, 192, 192, 0.349);
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s;
+  color: #ffffff79;
+  border-radius: 5px;
+  height: 50px;
+}
+.timerButtons button[name="start"]:hover{
+  background-color: rgba(192, 192, 192, 0.527);
+}
+button[name="setting"]{
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  background:none;
+  border: none;
+}
+.timerSettingContainer{
+width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(97, 96, 96, 0.705);
+  position:absolute;
+  bottom:120px;
+  left: 50px;
+  border-radius: 15px;
+  color: #fff;
+}
+.timerSettingContainer input{
+  width: 75%;
+  margin-top: 10px;
+  border: 2px solid black;
+  background:rgba(192, 192, 192, 0.603);
+  border-radius: 10px;
+  padding: 5px;
+}
+.timerButtons img{
+  width: 35px;
+}
+.timerEndTime{
+  position: absolute;
+  bottom: 150px;
+  left: 40px;
+  background-color: rgba(255, 255, 255, 0.521);
+  width: 75%;
+  height: 150px;
+  border-radius: 15px;
+}
+.endContainer{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  animation: timer 0.5s  infinite ;
+  border-radius: 15px;
+  overflow: hidden;
+}
+@keyframes timer{
+  50%{
+    background-color: red;
+  }
+  100%{
+    background-color: yellow;
+  }
 }

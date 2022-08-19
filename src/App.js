@@ -6,6 +6,7 @@ import Chronometer from "./components/Chronometer";
 import Timer from "./components/Timer";
 
 const App = () => {
+  console.log("render");
   return (
     <div className="App">
       <div className="appContainer">

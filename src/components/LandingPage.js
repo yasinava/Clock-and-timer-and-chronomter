@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 import styles from "./styles/Landing.module.css";
 const LandingPage = () => {
@@ -8,7 +8,7 @@ const LandingPage = () => {
   const s = date.getSeconds();
 
   const [second, setSecond] = useState("");
-  
+
   useEffect(() => {
     const interval = setInterval(() => {
       setSecond(s);
@@ -19,6 +19,7 @@ const LandingPage = () => {
   const Clock = `${h < 10 ? "0" : ""}${h}:${m < 10 ? "0" : ""}${m}:${
     s < 10 ? "0" : ""
   }${s}`;
+  console.log("render");
   return (
     <div
       className={h >= 20 || h <= 5 ? styles.moonContainer : styles.sunContainer}
@@ -26,7 +27,15 @@ const LandingPage = () => {
       <div>
         <div className={styles.navbarContainer}>
           <Link to="/*">
-            <div className={(window.location.pathname==="/*" || window.location.pathname==="/") && styles.navbarClockItem}>Clock</div>
+            <div
+              className={
+                (window.location.pathname === "/*" ||
+                  window.location.pathname === "/") &&
+                styles.navbarClockItem
+              }
+            >
+              Clock
+            </div>
           </Link>
           <Link to="/chronometer">
             <div>Chronometer</div>
